@@ -60,17 +60,19 @@ The following example:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<config>
-<!--defining variable-->
-<var-def name="http_response">
-<!--passing the appropriate value from url_to_check column in input data file as a parameter for http plugin-->
-<http url = "${url_to_check}"></http>
-</var-def>
-<!--exporting all original input columns-->
-<export include-original-data="true">
-<!--adding a new column with the http plugin result to the export file-->
-<single-column name="http" value= "${http_response }"/>
-</export>
-</config>
+   <config>
+	<!--defining variable-->
+	<var-def name="http_response">
+	 <!--passing the appropriate value from url_to_check column in input data file as a parameter for http plugin-->
+	 <http url = "${url_to_check}"></http>
+	</var-def>
+
+	<!--exporting all original input columns-->
+	<export include-original-data="true">
+	 <!--adding a new column with the http plugin result to the export file-->
+	 <single-column name="http" value= "${http_response }"/>
+	</export>
+	
+	</config>
 
 ```
